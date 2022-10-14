@@ -326,13 +326,13 @@
             // 
             // btnPesquisarCep
             // 
-            this.btnPesquisarCep.Enabled = false;
             this.btnPesquisarCep.Location = new System.Drawing.Point(150, 259);
             this.btnPesquisarCep.Name = "btnPesquisarCep";
             this.btnPesquisarCep.Size = new System.Drawing.Size(84, 27);
             this.btnPesquisarCep.TabIndex = 35;
             this.btnPesquisarCep.Text = "Pesquisar";
             this.btnPesquisarCep.UseVisualStyleBackColor = true;
+            this.btnPesquisarCep.Click += new System.EventHandler(this.btnPesquisarCep_Click);
             // 
             // cmbNacionalidade
             // 
