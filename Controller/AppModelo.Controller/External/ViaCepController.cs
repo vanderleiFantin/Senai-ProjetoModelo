@@ -1,4 +1,5 @@
 ﻿using AppModelo.Model.Domain.Wrappers;
+using AppModelo.Model.Infra.ViaCep;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,10 @@ namespace AppModelo.Controller.External
     {
         public ViaCepWrapper Obter(string cep)
         {
-            var viaCep = new ViaCepWrapper();
-            //FAKE CONSULTA
-            viaCep.Bairro = "Araca";
-            viaCep.Logradouro = "Av Conceicao da Barra";
-            viaCep.Localidade = "Linhares";
+            
+            
+            var service = new ViaCepService();
+            var viaCep = service.ObterDaApi(cep);
 
             return viaCep;
         }
